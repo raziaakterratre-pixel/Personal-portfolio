@@ -1,0 +1,170 @@
+/* Use the Inter font family */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Disable text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Hero Section "Aura" Background */
+.hero-bg {
+    background: linear-gradient(270deg, #05a0589d, #057548, #34d399);
+    background-size: 400% 400%;
+    animation: gradient-animation 16s ease infinite;
+    filter: blur(80px); /* Creates the soft, blurry effect */
+    opacity: 0.6;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contact Section Gradient Background */
+.contact-bg {
+    background: linear-gradient(135deg, #065f46, #047857, #059669);
+}
+
+/* Custom focus styles for contact form inputs */
+input:focus, textarea:focus {
+    background-color: rgba(22, 146, 53, 0.568) !important;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Enhanced Portfolio Card --- */
+.portfolio-card {
+    background-color: lab(100% 0.01 -0.01);
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(2, 107, 65, 0.568), 0 10px 10px -5px rgba(110, 231, 183, 0.1);
+}
+
+/* --- Mobile Menu Animation --- */
+.mobile-menu-closed {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.mobile-menu-open {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* --- Skill Card Styling --- */
+.skill-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 10px 15px -3px rgba(10, 145, 21, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(6, 122, 76, 0.74), 0 10px 10px -5px rgba(110, 231, 183, 0.1);
+}
+
+.skill-card-img {
+    width: 100%;
+    height: 16rem; /* 256px */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.skill-card:hover .skill-card-img {
+    transform: scale(1.1);
+}
+
+.skill-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(4, 117, 38, 0.8), transparent);
+    padding: 1.5rem; /* 24px */
+}
+
+/* --- Lightbox --- */
+.lightbox-trigger {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-open {
+    overflow: hidden;
+}
+
+/* --- Custom About Section Hover --- */
+.about-section-hover {
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.about-section-hover:hover {
+    background-color: #dc2626; /* A solid red color (Tailwind's red-600) */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Target the text elements inside on hover */
+.about-section-hover:hover h2,
+.about-section-hover:hover p {
+    color: #ffffff;
+}
+
+/* Change the button color on section hover */
+.about-section-hover:hover .resume-button {
+    background: #16a34a; /* A solid green color (Tailwind's green-600) */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Custom Resume Section Hover --- */
+.resume-section-hover {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.resume-section-hover:hover {
+    background-color: #152b58; /* A solid ash color (Tailwind's gray-200) */
+}
+
+/* Target the green text elements inside on hover */
+.resume-section-hover:hover .portfolio-card p.text-emerald-600 {
+    color: #16a34a; /* A solid green color (Tailwind's green-600) */
+}
+
+/* Ensure other text remains the default color on hover */
+.resume-section-hover:hover .portfolio-card h4 {
+    color: #1f2937; /* Tailwind's gray-800 */
+}
+
+/* --- Custom Skills Section Hover --- */
+.skills-section-hover {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    padding: 2.5rem; /* Add padding for better visual effect */
+}
+
+.skills-section-hover:hover {
+    background-color: #111827; /* A solid navy blue color (Tailwind's gray-900) */
+}
+
+.skills-section-hover:hover .skill-card-overlay h3 {
+    color: #22c55e; /* A solid green color (Tailwind's green-500) */
+}
